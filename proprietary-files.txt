@@ -1,0 +1,10 @@
+# From rock MIUI V14.0.9.0.TLUMIXM
+-product/priv-app/MiuiCamera/MiuiCamera.apk:system/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera,Camera2,GoogleCameraGo|43cd1e2c2317423f32ddb7698b3a45dfe25fd2d5
+system/lib64/libcamera_algoup_jni.xiaomi.so
+system/lib64/libcamera_mianode_jni.xiaomi.so
+system/lib64/libcamera_ispinterface_jni.xiaomi.so
+system/lib64/libmtkisp_metadata_sys.so
+system/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+system/lib64/libgui.so:system/lib64/libgui-xiaomi.so
+vendor/lib64/libmialgoengine.so
+vendor/lib64/libxml2_vendor.so
