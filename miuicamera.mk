@@ -18,7 +18,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera \
     ro.com.google.lens.oem_camera_package=com.android.camera \
     ro.miui.notch=1 \
-    ro.product.mod_device=rock
+    ro.product.mod_device=rock_global
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += \
