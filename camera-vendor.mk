@@ -16,4 +16,5 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/camera/proprietary/vendor/lib64/libxml2_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml2_vendor.so
 
 PRODUCT_PACKAGES += \
+    libgui_shim_miuicamera \
     MiuiCamera

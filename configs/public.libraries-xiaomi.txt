@@ -1,6 +1,0 @@
-libcamera_algoup_jni.xiaomi.so
-libcamera_ispinterface_jni.xiaomi.so
-libcamera_mianode_jni.xiaomi.so
-libmtkisp_metadata_sys.so
-vendor.mediatek.hardware.camera.isphal@1.0.so
-vendor.mediatek.hardware.camera.isphal-V1-ndk.so
