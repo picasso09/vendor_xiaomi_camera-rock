@@ -55,11 +55,15 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        system/lib64/libgui-xiaomi.so)
-            patchelf --set-soname libgui-xiaomi.so "${2}"
+        system_ext/lib64/libcamera_algoup_jni.xiaomi.so|\
+        system_ext/lib64/libcamera_mianode_jni.xiaomi.so|\
+        system_ext/lib64/libcamera_ispinterface_jni.xiaomi.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libgui_shim_miuicamera.so" "${2}"
             ;;
-        system/lib64/libcamera_algoup_jni.xiaomi.so|system/lib64/libcamera_mianode_jni.xiaomi.so|system/lib64/libcamera_ispinterface_jni.xiaomi.so)
-            patchelf --replace-needed libgui.so libgui-xiaomi.so "${2}"
+        system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V4-ndk.so" "android.hardware.graphics.common-V7-ndk.so" "${2}"
             ;;
     esac
 }

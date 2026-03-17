@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter rock,$(TARGET_DEVICE)),)
 
-CAMERA_LIBRARIES := libcamera_algoup_jni.xiaomi.so libcamera_mianode_jni.xiaomi.so libcamera_ispinterface_jni.xiaomi.so
+CAMERA_LIBRARIES := libcamera_algoup_jni.xiaomi.so libcamera_mianode_jni.xiaomi.so libcamera_ispinterface_jni.xiaomi.so libmtkisp_metadata_sys.so vendor.mediatek.hardware.camera.isphal@1.0.so vendor.mediatek.hardware.camera.isphal-V1-ndk.so
 
 CAMERA_SYMLINKS := $(addprefix $(TARGET_OUT_APPS_PRIVILEGED)/MiuiCamera/lib/arm64/,$(notdir $(CAMERA_LIBRARIES)))
 $(CAMERA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
