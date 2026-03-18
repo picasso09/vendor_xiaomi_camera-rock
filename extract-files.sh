@@ -61,6 +61,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libgui.so" "libgui-xiaomi.so" "${2}"
             ;;
+        system_ext/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V4-ndk.so" "android.hardware.graphics.common-V7-ndk.so" "${2}"
+            ;;
     esac
 }
 
