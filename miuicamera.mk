@@ -15,11 +15,7 @@ PRODUCT_COPY_FILES += \
 
 #VNDK
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v34/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V4-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.graphics.common-V4-ndk.so
-
-# Shim
-PRODUCT_PACKAGES += \
-    libgui_shim_miuicamera
+    prebuilts/vndk/v34/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V4-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.graphics.common-V4-ndk.so
 
 # Properties
 PRODUCT_SYSTEM_PROPERTIES += \

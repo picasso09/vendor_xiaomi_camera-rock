@@ -59,7 +59,7 @@ function blob_fixup() {
         system_ext/lib64/libcamera_mianode_jni.xiaomi.so|\
         system_ext/lib64/libcamera_ispinterface_jni.xiaomi.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --add-needed "libgui_shim_miuicamera.so" "${2}"
+            "${PATCHELF}" --replace-needed "libgui.so" "libgui-xiaomi.so" "${2}"
             ;;
     esac
 }
