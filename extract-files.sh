@@ -65,6 +65,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.hardware.graphics.common-V4-ndk.so" "android.hardware.graphics.common-V7-ndk.so" "${2}"
             ;;
+        vendor/lib64/libmialgoengine.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
     esac
 }
 
